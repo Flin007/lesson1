@@ -35,5 +35,30 @@
       </ul>
     </div>
   </article>
+  <script>
+    let currentPhoto = document.getElementById('currentPhoto');
+    let nextPhoto = document.getElementById('nextPhoto');
+    let prevPhoto = document.getElementById('prevPhoto');
+    let photoList = [
+        'i/breuer-building.jpg',
+        'i/guggenheim-museum.jpg',
+        'i/headquarters.jpg',
+        'i/IAC.jpg',
+        'i/new-museum.jpg'
+    ];
+    let i = 0;
+    function setPhoto(i) {
+        currentPhoto.src = photoList[i];
+    }
+    setPhoto(i);
+    nextPhoto.onclick = function () {
+        i < photoList.length - 1 ? i++ : i = 0;
+        setPhoto(i);
+    };
+    prevPhoto.onclick = function () {
+        i > 0 ? i-- : i = photoList.length - 1;
+        setPhoto(i);
+    }
+  </script>
 </body>
 </html>
