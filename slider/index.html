@@ -41,14 +41,15 @@
         'i/airmax-top-view.png'
     ];
     let i = 0;
-    setInterval(function () {
-        if(i < slides.length){
+    setInterval(()=>{
+        if ( i < slides.length - 1){
             slider.src = slides[i];
             i++;
         }else{
+            slider.src = slides[i];
             i = 0;
         }
-    }, 5000);
+    }, 500);
   </script>
 </body>
 </html>
